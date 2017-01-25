@@ -2,5 +2,11 @@
     <string name="app_name">AndroidLabs</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\’m a button</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="title_activity_login1">LoginActivity1</string>
+    <string name="title_activity_loginlab2">Loginlab2Activity</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
