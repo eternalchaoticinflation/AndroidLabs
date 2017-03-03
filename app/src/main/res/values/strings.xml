@@ -8,5 +8,22 @@
     <string name="title_activity_login1">LoginActivity1</string>
     <string name="title_activity_loginlab2">Loginlab2Activity</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="Enter_email">Enter your email</string>
+    <string name="login">Login!</string>
+    <string name="dialog_message">Choose Ok or Cancel!</string>
+    <string name="dialog_title">Cancel Activity?</string>
+    <string name="enter_pass">Password</string>
+    <string name="ok">Activity Stopped</string>
+    <string name="cancel">Activity Resumed</string>
+    <string name="startChat">Start Chat</string>
+    <string name="sendButton">Send</string>
+    <string name="inputMessage">Click to Chat</string>
+    <string-array name="pie_array">
+        <item></item>
+
+    </string-array>
+
+
+
 
 </resources>

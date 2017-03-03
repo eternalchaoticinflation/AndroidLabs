@@ -21,7 +21,7 @@
         android:layout_marginStart="11dp"
         android:layout_alignParentTop="true">
 
-    </GridLayout>
+
 
     <CheckBox
         android:text="CheckBox"
@@ -39,15 +39,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:id="@+id/radioButton"
-        android:layout_below="@+id/gridLayout2"
-        android:layout_alignStart="@+id/gridLayout2"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignStart="@+id/gridLayout"
         android:layout_marginStart="20dp" />
 
     <Switch
         android:text="Enablesomething"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/switch4"
+        android:id="@+id/switchToast"
         android:layout_below="@+id/checkBox"
         android:layout_alignStart="@+id/radioButton"
         android:layout_marginTop="39dp" />
@@ -56,9 +56,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/btn_star_big_on"
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonone"
         android:layout_alignBottom="@+id/switch4"
         android:layout_alignParentEnd="true"
         android:layout_alignStart="@+id/checkBox" />
+    </GridLayout>
 
 </RelativeLayout>

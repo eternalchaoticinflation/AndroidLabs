@@ -22,5 +22,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:id="@+id/button" />
+        android:id="@+id/startListbutton" />
+
+    <Button
+        android:text="@string/startChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startChatbt"
+        android:layout_alignBaseline="@+id/startListbutton"
+        android:layout_alignBottom="@+id/startListbutton"
+        android:layout_toEndOf="@+id/startListbutton"
+        android:layout_marginStart="55dp" />
 </RelativeLayout>

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AndroidLabs</string>
+    <string name="ButtonText">Canadian button</string>
     <string name="hello_message">Hello Canada!</string>
+    <string name="Enter_email">Enter your emaiiil eh?</string>
+    <string name="login">Login!</string>
+    <string name="title_activity_loginlab2">Loginlab2Activity</string>
+    <string name="dialog_message">Do you want to stop? Choose Ok or Cancel</string>
+    <string name="dialog_title">Cancel Activity?</string>
+    <string name="ok">Ok Stop!</string>
+    <string name="cancel">No Resume</string>
+
+    <string name="enter_pass">Password eh?</string>
 </resources>

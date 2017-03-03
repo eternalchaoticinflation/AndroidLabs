@@ -15,7 +15,7 @@
     tools:showIn="@layout/activity_loginlab2">
 
     <TextView
-        android:text="Login:"
+        android:text="@string/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
@@ -27,13 +27,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:text="Enter your email"
+        android:text="@string/Enter_email"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:id="@+id/eTemail"
         android:hint="login name" />
 
     <TextView
-        android:text="Password:"
+        android:text="@string/enter_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
@@ -44,8 +44,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="password"
+        android:text="@string/enter_pass"
         android:ems="10"
-        android:id="@+id/editText5"
+        android:id="@+id/eTpassword"
         android:inputType="textPassword" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bLogin" />
 </LinearLayout>
