@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_gravity="bottom"
+    tools:context="com.example.nothi.androidlabs.MessageDetails">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_message_details"
+        >
+
+        <TextView
+            android:text="MessageHere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/messagedetails" />
+
+
+
+        <TextView
+
+            android:text="ID="
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idequals"
+            android:layout_below="@+id/messagedetails"
+            android:layout_alignParentStart="true" />
+
+
+        <Button
+            android:text="Delete the message"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/messagedeleteB"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="180dp" />
+    </RelativeLayout>
+</FrameLayout>

@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class StartActivity extends AppCompatActivity {
     protected static final String ACTIVITY_NAME = "StartActivity";
     private Button listB;
+    private Button weatherForcastBt;
    // private EditText emailInput;
     //private EditText passInput;
 
@@ -26,6 +27,7 @@ public class StartActivity extends AppCompatActivity {
         ///
         listB=(Button)findViewById(R.id.startListbutton);
         Button chatB=(Button)findViewById(R.id.startChatbt);
+        weatherForcastBt=(Button) findViewById(R.id.weatherforcastBt);
 
 
         //emailInput=(EditText) findViewById(R.id.eTemail);//edit text email
@@ -71,6 +73,19 @@ public class StartActivity extends AppCompatActivity {
                 }
 
         );
+        weatherForcastBt.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Log.i(ACTIVITY_NAME, "WeatherForcast is loading..." );
+                        Intent chatIn= new Intent("com.example.nothi.androidlabs.WeatherForecast");
+                        startActivity(chatIn);
+
+
+
+                    }
+                }
+        );
 
 
 
@@ -107,6 +122,7 @@ public class StartActivity extends AppCompatActivity {
 
         //startActivityForResult(listIn, 5); triggered by
         // will input onActivityResult(5, RESULT_OK or RESULT_CANCELLED, listIn)
+        //will be inputed after we have returned to startactivity
        //will log like onResume(), or onStop();
         if (requestCode==5){
             //could start activie or flag error for now

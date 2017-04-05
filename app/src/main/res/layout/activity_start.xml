@@ -33,4 +33,13 @@
         android:layout_alignBottom="@+id/startListbutton"
         android:layout_toEndOf="@+id/startListbutton"
         android:layout_marginStart="55dp" />
+
+    <Button
+        android:text="WeatherForcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startChatbt"
+        android:layout_alignEnd="@+id/startChatbt"
+        android:layout_marginTop="21dp"
+        android:id="@+id/weatherforcastBt" />
 </RelativeLayout>
