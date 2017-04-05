@@ -57,16 +57,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".MessageDetails">
             <intent-filter>
                 <action android:name="com.example.nothi.androidlabs.MessageDetails" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".TestToolbar"
+            android:label="@string/title_activity_test_toolbar"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.nothi.androidlabs.TestToolbar" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
 
         </activity>
+
+
     </application>
 
 </manifest>

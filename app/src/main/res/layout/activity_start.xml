@@ -10,36 +10,53 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.nothi.androidlabs.StartActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_message"
-        android:id="@+id/textView" />
-
     <Button
         android:text="@string/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:id="@+id/startListbutton" />
+        android:id="@+id/startListbutton"
+        android:textStyle="normal|bold"
+        android:background="@android:color/holo_orange_light" />
+
+    <Button
+        android:text="WeatherForcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/weatherforcastBt"
+        android:textStyle="normal|bold"
+        android:background="@drawable/blue_border"
+
+        android:layout_below="@+id/startChatbt"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="19dp" />
+
+    <Button
+        android:text="ToolBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarbutton"
+        android:elevation="24dp"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="normal|bold"
+       android:background="@drawable/border_good"
+        android:layout_alignBaseline="@+id/weatherforcastBt"
+        android:layout_alignBottom="@+id/weatherforcastBt"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/startListbutton" />
 
     <Button
         android:text="@string/startChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/startChatbt"
+        android:textStyle="normal|bold"
+        android:background="@drawable/blue_white"
         android:layout_alignBaseline="@+id/startListbutton"
         android:layout_alignBottom="@+id/startListbutton"
-        android:layout_toEndOf="@+id/startListbutton"
-        android:layout_marginStart="55dp" />
-
-    <Button
-        android:text="WeatherForcast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/startChatbt"
-        android:layout_alignEnd="@+id/startChatbt"
-        android:layout_marginTop="21dp"
-        android:id="@+id/weatherforcastBt" />
+        android:layout_alignEnd="@+id/weatherforcastBt"
+        android:layout_alignStart="@+id/weatherforcastBt"
+        android:textColor="@android:color/background_light" />
 </RelativeLayout>

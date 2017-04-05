@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_folder"
+        android:title="One"
+        android:icon="@drawable/Folder-48"
+        android:orderInCategory="101"
+        app:showAsAction="always" />
+
+
+
+    <item android:id="@+id/action_save"
+        android:title="One"
+        android:icon="@drawable/Save-48"
+        android:orderInCategory="102"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_assistant"
+        android:title="One"
+        android:icon="@drawable/Assistant-48"
+        android:orderInCategory="103"
+        app:showAsAction="always" />
+
+</menu>
