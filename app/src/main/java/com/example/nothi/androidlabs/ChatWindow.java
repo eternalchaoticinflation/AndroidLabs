@@ -47,12 +47,13 @@ public class ChatWindow extends AppCompatActivity {
 
     private ChatAdapter messageAdapter;
     private MessageFragment mdetails;
+    private int deleteid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_window);
-        fmanager=this.getFragmentManager();
+        fmanager=this.getFragmentManager();//maybe try static?
         //this.findViewById(R.id.chatwindowframe).isActivated();
         messageAdapter=new ChatAdapter(this);
         if(findViewById(R.id.chatwindowframe)==null){
@@ -165,6 +166,7 @@ public class ChatWindow extends AppCompatActivity {
                 //positiontracker=printers.indexOf(printers.get(position));
                 //printers =new ArrayList<>( Arrays.asList("C110","C112","C138","C148"));
                 String toastdisplay= Integer.toString( (int)messageAdapter.getItemID(position));
+                deleteid=(int)messageAdapter.getItemID(position);
                 positionlatch=position;//used for intent
                 Toast.makeText(getApplicationContext(), "pies.get(position) is: "+pies.get(position)+" item ID = " +toastdisplay, Toast.LENGTH_LONG).show();
                 if(findViewById(R.id.chatwindowframe)==null){
@@ -184,6 +186,7 @@ public class ChatWindow extends AppCompatActivity {
 
 
                     if (fragmentdead==true){
+
                         //fragment is dead make frag before
                         transaction=fmanager.beginTransaction();
                         transaction.add(R.id.chatwindowframe, mdetails, "messagedetailsfrag");
@@ -247,8 +250,15 @@ public class ChatWindow extends AppCompatActivity {
 
                 String toastdummy=Integer.valueOf(positionlatch).toString();
                 Toast.makeText(this, "ListView position is: "+toastdummy, Toast.LENGTH_LONG).show();
+
+                cDB.delete("tablechat","_id=? and chatcol=?",new String[]{Integer.toString(deleteid), pies.get(positionlatch) });
+                //^above command is like
+                //db.delete("tablename","id=? and name=?",new String[]{"1","jack"});
+                //delete from tablename where id='1' and name ='jack'
+                //DO NOT USE cDB.rawQuery("DELETE FROM tablechat WHERE chatcol = ?", new String[]{ pies.get(positionlatch)});
                 pies.remove(positionlatch);
                 messageAdapter.notifyDataSetChanged();
+
 
             }
         }
@@ -280,6 +290,8 @@ public class ChatWindow extends AppCompatActivity {
         }
         @Override
         public String getItem(int position) {
+            // this fills the chatAdapter with strings as long as it is below getCount
+            //if the string is "GGGGG" it will display "GGGGG" until getCount is reached
             return pies.get(position);
         }//alreadydone
 

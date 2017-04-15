@@ -16,6 +16,7 @@ public class StartActivity extends AppCompatActivity {
     private Button weatherForcastBt;
    // private EditText emailInput;
     //private EditText passInput;
+    private Button toolbarb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class StartActivity extends AppCompatActivity {
         listB=(Button)findViewById(R.id.startListbutton);
         Button chatB=(Button)findViewById(R.id.startChatbt);
         weatherForcastBt=(Button) findViewById(R.id.weatherforcastBt);
+        toolbarb=(Button)this.findViewById(R.id.toolbarbutton);
 
 
         //emailInput=(EditText) findViewById(R.id.eTemail);//edit text email
@@ -78,15 +80,28 @@ public class StartActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Log.i(ACTIVITY_NAME, "WeatherForcast is loading..." );
-                        Intent chatIn= new Intent("com.example.nothi.androidlabs.WeatherForecast");
-                        startActivity(chatIn);
+                        Intent findweather= new Intent("com.example.nothi.androidlabs.WeatherForecast");
+                        startActivity(findweather);
 
 
 
                     }
                 }
         );
+        toolbarb.setOnClickListener(//starts Act for toolbar
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        Log.i(ACTIVITY_NAME, "Testing ToolBar" );
+                        Intent testtoolbar= new Intent("com.example.nothi.androidlabs.TestToolbar");
+                        startActivity(testtoolbar);
 
+
+
+                    }
+                }
+
+        );
 
 
 

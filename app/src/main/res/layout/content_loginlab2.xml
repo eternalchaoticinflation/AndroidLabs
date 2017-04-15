@@ -53,5 +53,6 @@
         android:text="Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bLogin" />
+        android:id="@+id/bLogin"
+        android:background="@drawable/blue_white" />
 </LinearLayout>

@@ -98,25 +98,25 @@ public class WeatherForecast extends AppCompatActivity {
 
 
 
-                currenttempView.setText(currenttempView.getText()+currentTempS+" C*");
-                mintempView.setText( mintempView.getText()+minTempS+" C*");
-                maxtempView.setText(maxtempView.getText()+maxTempS+" C*");
+            currenttempView.setText(currenttempView.getText()+currentTempS+" C*");
+            mintempView.setText( mintempView.getText()+minTempS+" C*");
+            maxtempView.setText(maxtempView.getText()+maxTempS+" C*");
 
 
-                //weatherPic.setImageBitmap(icon); need to get bitmap somwhow.
-                outsidePic.setImageBitmap(weatherPic);// Bitmap weatherPic;
+            //weatherPic.setImageBitmap(icon); need to get bitmap somwhow.
+            outsidePic.setImageBitmap(weatherPic);// Bitmap weatherPic;
 
             progressBr.setVisibility(View.INVISIBLE);
 
 
             // Button rouiBt;
-           // Button pttBt;
+            // Button pttBt;
             //Button siBt;
-           // Button saBt;
+            // Button saBt;
             //ProgressBar progressBr;
             //TextView currenttempView;
-           // TextView mintempView;
-           // TextView maxtempView;
+            // TextView mintempView;
+            // TextView maxtempView;
 
 
         }
@@ -230,28 +230,28 @@ public class WeatherForecast extends AppCompatActivity {
                         }
 
                         else{
-                        //Downloading if doesn't eexist
-                        //Bitmap weatherPic;
+                            //Downloading if doesn't eexist
+                            //Bitmap weatherPic;
                             iconTaglatch = parser.getAttributeValue(null, "icon");
                             URL iconUrl = new URL("http://openweathermap.org/img/w/" + iconTaglatch + ".png");
 
 
 
-                        ////from the gotten Imagae
+                            ////from the gotten Imagae
 
-                        //Bitmap image  = HTTPUtils.getImage(ImageURL));
-                        weatherPic = getImage(iconUrl);
+                            //Bitmap image  = HTTPUtils.getImage(ImageURL));
+                            weatherPic = getImage(iconUrl);
 
-                        //     outsidePic.setImageBitmap(weatherPic);// Bitmap weatherPic;
-                        //You must build a Bitmap object, and then save it to the local storage.
-                        // Once you have downloaded the image, call publishProgress() with 100
-                        // as the parameter to show that the progress is completed.
-                        // Save the Bitmap object to the local application storage with the following
-                        // code:
+                            //     outsidePic.setImageBitmap(weatherPic);// Bitmap weatherPic;
+                            //You must build a Bitmap object, and then save.png it to the local storage.
+                            // Once you have downloaded the image, call publishProgress() with 100
+                            // as the parameter to show that the progress is completed.
+                            // Save the Bitmap object to the local application storage with the following
+                            // code:
 
-                        //
-                        FileOutputStream outputStream = openFileOutput(iconTaglatch + ".png",
-                                Context.MODE_PRIVATE);
+                            //
+                            FileOutputStream outputStream = openFileOutput(iconTaglatch + ".png",
+                                    Context.MODE_PRIVATE);
 
 
                             weatherPic.compress(Bitmap.CompressFormat.PNG, 80, outputStream);
@@ -260,14 +260,14 @@ public class WeatherForecast extends AppCompatActivity {
                             outputStream.flush();
                             outputStream.close();
 
-                        //publishProgress() with 100 ?????????
+                            //publishProgress() with 100 ?????????
                             Log.i( ACTIVITY_NAME,"else doens't exist getting a picture and saving bitmap");
                             //I used lab2's ACTIVITY_NAME
                         }}
 
-                        publishProgress(100); //publishProgress() with 100
-                    }
+                    publishProgress(100); //publishProgress() with 100
                 }
+            }
 
 
 
@@ -300,7 +300,7 @@ public class WeatherForecast extends AppCompatActivity {
 
         Log.i(ACTIVITY_NAME, getBaseContext().getFileStreamPath(fName).toString());
 
-       // cloudy, sunny, raining images
+        // cloudy, sunny, raining images
         File file = getBaseContext().getFileStreamPath(fName);//existing sun/rain image
         return file.exists();
     }

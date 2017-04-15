@@ -18,6 +18,14 @@
     <string name="startChat">Start Chat</string>
     <string name="sendButton">Send</string>
     <string name="inputMessage">Click to Chat</string>
+
+    <string name="saveiconmessage">You have saved! Do you want to go back?</string>
+
+    <string name="ast_message">Let me change item1\'s message:</string>
+    <string name="ast_title">Input to change snackbar messages!</string>
+
+
+
     <string-array name="pie_array">
         <item></item>
 
